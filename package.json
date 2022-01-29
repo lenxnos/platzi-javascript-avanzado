@@ -1,9 +1,9 @@
 {
   "name": "platzi-media-player",
   "version": "1.0.0",
-  "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
+  "description": "Proyecto como estudiante del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
   "license": "MIT",
-  "author": "Richard B. Kaufman López <richardbkaufman@gmail.com>",
+  "author": "Nelson Soto <nelson.soto.c05@gmail.com>",
   "keywords": [
     "platzi"
   ],
