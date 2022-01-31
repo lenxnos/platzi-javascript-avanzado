@@ -10,3 +10,11 @@ playButton.onclick = () => player.tooglePlay();
 
 const muteButton = document.querySelector("#muteButton");
 muteButton.onclick = () => player.toogleMute();
+
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .catch((error) => {
+      console.log(error.message);
+    })
+}
