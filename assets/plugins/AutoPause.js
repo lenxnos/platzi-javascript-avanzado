@@ -3,6 +3,7 @@ class AutoPause {
   constructor () {
     this.threshold = 0.25;
     this.handleInterception = this.handleInterception.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
 
   run(player) {
@@ -12,6 +13,8 @@ class AutoPause {
     });
 
     observer.observe(this.player.media);
+
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
   }
 
   handleInterception(entries) {
@@ -23,6 +26,15 @@ class AutoPause {
       this.player.pause();
     }
   };
+
+  handleVisibilityChange() {
+    const isVisible = document.visibilityState === 'visible';
+    if (isVisible) {
+      this.player.play();
+    } else {
+      this.player.pause();
+    }
+  }
 }
 
 export default AutoPause;
