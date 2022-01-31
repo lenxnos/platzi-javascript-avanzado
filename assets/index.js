@@ -13,7 +13,10 @@ muteButton.onclick = () => player.toogleMute();
 
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register(
+    new URL('/sw.js', import.meta.url),
+    { type: 'module' }
+  )
     .catch((error) => {
       console.log(error.message);
     })

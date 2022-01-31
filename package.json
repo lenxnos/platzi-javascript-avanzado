@@ -8,9 +8,12 @@
     "platzi"
   ],
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html"
   },
+  "browserslist": [
+    "last 1 chrome version"
+  ],
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "parcel": "^2.2.1"
   }
 }
